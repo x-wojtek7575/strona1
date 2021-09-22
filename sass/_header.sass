@@ -1,0 +1,90 @@
+.slider
+    position: relative
+    background: url(../img/photo1.jpg) no-repeat center
+    background-size: cover
+    overflow: hidden
+    &::before 
+        content: ""
+        position: absolute
+        left: 0
+        top: 0
+        bottom: 0
+        right: 0
+        background-image: linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.1) 100%)
+    &__content-container
+        position: relative
+        height: 100%
+    &__container-nav
+        position: absolute
+        bottom: 10%
+        left: 50%
+        transform: translateX(-50%)
+    &__element
+        display: none
+        text-align: center
+        font-family: $main-font
+        color: white
+        &--active
+            display: block
+            position: absolute
+            max-width: 1440px
+            width: 100%
+            padding: 0 5%
+            top: 50%
+            left: 50%
+            transform: translate(-50%,-50%)
+            & 
+                .slider__title
+                    animation: slider-text-animation .8s ease-in-out both
+                .slider__description
+                    animation: slider-text-animation .8s ease-in-out both
+                .slider__line
+                    animation: slider-line-animation 1s ease-in-out both
+    &__title
+        margin-bottom: 20px
+        background: transparent
+        font-size: 6rem
+        letter-spacing: 2px 
+    &__description
+        margin-bottom: 20px
+        font-size: 2rem
+    &__line
+        position: absolute
+        left: 50%
+        bottom: 0%
+        height: 5px
+        width: 30%
+        transform: translateX(-50%)
+        background: white
+
+
+.nav
+    display: flex
+    list-style: none
+    &__item
+        width: 35px
+        height: 35px
+        margin: 5px
+        font: 700 2rem/35px $main-font
+        text-align: center
+        border-radius: 50%
+        background: white
+        color: $main-color
+        cursor: pointer
+        transition: color,background .1s linear
+        &--active
+            background: $main-color
+            color: white
+
+@keyframes slider-text-animation
+    0%
+        opacity: 0
+        transform: translateY(20px)
+    100%
+        opacity: 1
+        transform: translateY(0%)
+@keyframes slider-line-animation
+    0%
+        opacity: 0
+    100%
+        opacity: 1

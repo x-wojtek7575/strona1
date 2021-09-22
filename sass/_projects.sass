@@ -1,0 +1,78 @@
+.projects
+    &__content-container
+        display: flex
+        flex-direction: column
+        align-items: center
+        +container(60px,5%)
+        text-align: center
+    &__title
+        font: italic 700 $title-font-size $main-font
+    &__container-for-buttons
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        padding: 30px 0
+    &__option
+        position: relative
+        padding: 10px 20px
+        margin: 0 20px
+        border: none
+        background: none
+        cursor: pointer
+        overflow: hidden
+        font: 2rem $main-font
+        &:hover
+            color: $kolejny-color
+        &::after
+            content: ""
+            position: absolute
+            bottom: 0
+            left: -100%
+            width: 100%
+            height: 2px
+            transition: transform 0.3s linear
+            background: $kolejny-color
+        &:hover::after
+            transform: translateX(100%)
+        &--active.projects__option
+            color: $main-color
+        &--active.projects__option::after
+            transform: translateX(100%)
+    &__grid
+        margin-top: 1%
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        grid-template-rows: repeat(1, 300px)
+        grid-auto-rows: 300px
+        padding: 25px
+        column-gap: 25px
+        grid-row-gap: 25px
+    &__photo-container
+        width: 100%
+        position: relative
+        overflow: hidden
+        cursor: pointer
+        &:hover 
+            & .projects__photo
+                transform: scale(1.1)
+            &::after
+                display: block
+        &::after
+            content: ""
+            display: none
+            position: absolute
+            top: 0
+            left: 0
+            bottom: 0
+            right: 0
+            z-index: 2
+            // background: red
+            background-image: linear-gradient(90deg, #75f80a80 0%, #75f80a80  100%)
+            
+    &__photo
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+        transition: transform 0.3s 
+    

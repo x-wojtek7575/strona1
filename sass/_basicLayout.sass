@@ -1,0 +1,26 @@
+.wrapper 
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 100vh auto auto auto auto auto
+    min-height: 300vh
+    &__slider, &__advantage, &__projects, &__gallery, &__contact, &__footer
+        grid-column: 1
+    &__slider
+        grid-row: 1
+    &__advantage
+        grid-row: 2
+    &__about-us
+        grid-row: 3
+    &__projects
+        grid-row: 4
+    &__gallery
+        grid-row: 5
+    &__footer
+        grid-row: 6
+
+.nav-container
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    height: 8vh

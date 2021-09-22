@@ -1,0 +1,33 @@
+.advantages__content-container
+    display: flex
+    position: relative
+    justify-content: space-evenly
+    +container(1%, 5%)
+
+.advantage
+    flex-basis: 30%
+    margin: 5% 0
+    display: flex
+    flex-direction: column
+    justify-content: flex-start
+    align-items: center
+    color: $second-color
+    &__img-container
+        width: 60%
+        padding: 0 15%
+    &__img
+        width: 100%
+        height: 130px
+        object-fit: contain
+        object-position: center
+    &__title
+        margin: 12px 0 20px
+        color: black
+        text-decoration: none
+        font: 700 3rem $main-font
+        &:hover
+            color: $kolejny-color
+    &__description
+        width: 76%
+        text-align: center
+        font: 1.4rem/1.8 $main-font

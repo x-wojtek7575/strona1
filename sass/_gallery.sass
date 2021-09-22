@@ -1,0 +1,50 @@
+.gallery
+    background: url(../img/wood.jpg) no-repeat center
+    background-size: cover
+    &__content-container
+        +container(5%, 5%)
+        color: white
+        overflow: hidden
+    &__title
+        font: 700 $title-font-size $main-font
+        letter-spacing: 2px
+        text-align: center
+    &__grid
+        display: grid
+        padding: 25px
+        column-gap: 25px
+        grid-row-gap: 25px
+        grid-template-columns: repeat(3,1fr)
+        grid-template-rows: 1fr
+    &__article
+        grid-column-end: span 1
+        display: flex
+        flex-direction: column
+        background: #332415
+    &__photo-container
+        flex-basis: 60%
+        overflow: hidden
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        object-position: center
+    &__text-container
+        flex-basis: 40%
+        padding: 2% 7% 5%
+    &__element-title
+        a
+            display: block
+            font: 700 3rem $main-font
+            color: white
+            text-decoration: none
+            transition: color .2s linear
+            padding: 4% 0 4%
+            &:hover
+                color: $kolejny-color
+    &__element-description
+        font: $normal-font-size $main-font
+        line-height: 1.7
+
+
+

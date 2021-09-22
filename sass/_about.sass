@@ -1,0 +1,25 @@
+.wrapper__about-us
+    background: url(../img/wood.jpg) no-repeat center
+    background-size: cover
+.about-us
+    &__content-container
+        +container(0, 5%)
+        color: white
+        text-align: center
+    &__title
+        margin: 5% 0 2.5%
+        font: 700 $title-font-size $main-font
+        letter-spacing: 2px
+    &__description
+        font: 2rem/1.8 $main-font
+    &__btn
+        display: inline-block
+        margin: 40px 0 50px
+        padding: 15px 8%
+        border-radius: 30px
+        font: 2rem $second-font
+        color: white
+        text-decoration: none
+        background: $main-color
+        &:hover
+            background: darken($main-color, 15%) 
